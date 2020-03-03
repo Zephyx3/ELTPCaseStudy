@@ -1,0 +1,24 @@
+﻿.navbar {
+    background-color: #6885f6;
+}
+
+.active {
+    color: yellow ActiveBorder;
+}
+
+.navbar alink .navbar a:visited {
+    color: white ActiveBorder;
+}
+
+.navbar a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.dropdown-menu a:hover {
+    color: black;
+}
+
+.hidden {
+    display: none;
+}
