@@ -82,3 +82,15 @@ C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\obj\Debug\ELTPCaseS
 C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\obj\Debug\ELTPCaseStudy.csproj.CopyComplete
 C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\obj\Debug\ELTPCaseStudy.dll
 C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\obj\Debug\ELTPCaseStudy.pdb
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\EntityFramework.dll
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\EntityFramework.SqlServer.dll
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\Unity.Abstractions.dll
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\Unity.Container.dll
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\Unity.Mvc5.dll
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\Unity.WebApi.dll
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\EntityFramework.xml
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\EntityFramework.SqlServer.xml
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\Unity.Abstractions.pdb
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\Unity.Container.pdb
