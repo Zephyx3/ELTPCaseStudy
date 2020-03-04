@@ -20,6 +20,12 @@ namespace ELTPCaseStudy.Controllers
             return View();
         }
 
+        public ActionResult Movies()
+        {
+            ViewBag.Message = "Your Movies will appear here.";
+            return View();
+        }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
