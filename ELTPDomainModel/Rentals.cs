@@ -12,7 +12,10 @@ namespace ELTPDomainModel
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int RentalID { get; set; }
-        public DateTime RentalDate { get; set; }
+        public DateTime RentalDateAndTime { get; set; }
+        public int RentalDuration { get; set; }
+
+        public int MovieID { get; set; }
 
         [ForeignKey("UserID")]
         public virtual Users User { get; set; }
