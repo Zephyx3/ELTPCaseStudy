@@ -337,6 +337,24 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ELTPDomainModel\ELTPDomainModel.csproj">
+      <Project>{152d59c3-65ac-4e99-a44a-fca3aa579649}</Project>
+      <Name>ELTPDomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ELTPRepository\ELTPRepository.csproj">
+      <Project>{e9eb5c82-4169-4bac-a5b8-f7713889c511}</Project>
+      <Name>ELTPRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ELTPServiceLayer\ELTPServiceLayer.csproj">
+      <Project>{6ff2a986-aa82-4a08-8705-bfe4930a31f0}</Project>
+      <Name>ELTPServiceLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ELTPViewModel\ELTPViewModel.csproj">
+      <Project>{52a6859e-e043-454e-8498-e0a7b69ef533}</Project>
+      <Name>ELTPViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
