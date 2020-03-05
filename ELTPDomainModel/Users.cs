@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ELTPDomainModel
 {
-    public class User
+    public class Users
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -17,6 +17,5 @@ namespace ELTPDomainModel
         public string Name { get; set; }
         public string Mobile { get; set; }
         public bool IsAdmin { get; set; }
-
     }
 }

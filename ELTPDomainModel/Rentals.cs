@@ -7,17 +7,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ELTPDomainModel
 {
-    public class Review
+    public class Rentals
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ReviewID { get; set; }
-        public string ReviewText { get; set; }
-        public DateTime ReviewDateAndTime { get; set; }
-        public int UserID { get; set; }
-        public int MovieID { get; set; }
+        public int RentalID { get; set; }
+        public DateTime RentalDate { get; set; }
 
         [ForeignKey("UserID")]
-        public virtual User User { get; set; }
+        public virtual Users User { get; set; }
+
+        [ForeignKey("MovieID")]
+        public virtual List<Movies> Movie { get; set; }
     }
 }
