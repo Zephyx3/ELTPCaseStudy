@@ -94,3 +94,15 @@ C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\EntityFramework
 C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\Unity.Abstractions.pdb
 C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\Unity.Container.pdb
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\ELTPDomainModel.dll
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\ELTPRepository.dll
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\ELTPServiceLayer.dll
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\ELTPViewModel.dll
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\ELTPDomainModel.pdb
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\ELTPDomainModel.dll.config
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\ELTPRepository.pdb
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\ELTPRepository.dll.config
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\ELTPServiceLayer.pdb
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\ELTPServiceLayer.dll.config
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\ELTPViewModel.pdb
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\ELTPViewModel.dll.config

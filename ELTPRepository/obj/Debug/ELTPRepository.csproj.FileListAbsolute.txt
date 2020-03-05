@@ -60,3 +60,6 @@ C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPRepository\obj\Debug\ELTPRepo
 C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPRepository\obj\Debug\ELTPRepository.csproj.CopyComplete
 C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPRepository\obj\Debug\ELTPRepository.dll
 C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPRepository\obj\Debug\ELTPRepository.pdb
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPRepository\bin\ELTPDomainModel.dll
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPRepository\bin\ELTPDomainModel.pdb
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPRepository\bin\ELTPDomainModel.dll.config

@@ -6,7 +6,7 @@ using ELTPDomainModel;
 
 namespace ELTPRepository
 {
-    public interface IusersRepository
+    public interface IUsersRepository
     {
         void InsertUser(Users u);
         void UpdateUser(Users u);
@@ -23,7 +23,7 @@ namespace ELTPRepository
 
         int GetLatestUserID();
     }
-    public class UsersRepository : IusersRepository
+    public class UsersRepository : IUsersRepository
     {
         public void DeleteUser(Users u)
         {
