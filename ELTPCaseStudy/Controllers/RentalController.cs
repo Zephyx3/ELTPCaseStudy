@@ -18,5 +18,11 @@ namespace ELTPCaseStudy.Controllers
             return View();
         }
 
+        public ActionResult ReturnMovie()
+        {
+            return View();
+        }
+
+
     }
 }

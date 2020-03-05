@@ -177,6 +177,16 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\movies\birds-of-prey.jpg" />
+    <Content Include="images\movies\dolittle.jpg" />
+    <Content Include="images\movies\godzilla.jpg" />
+    <Content Include="images\movies\mulan.jpg" />
+    <Content Include="images\movies\onward.jpg" />
+    <Content Include="images\movies\quietplace.jpg" />
+    <Content Include="images\movies\sonic.jpg" />
+    <Content Include="images\movies\spongebob.jpg" />
+    <Content Include="images\movies\trolls.jpg" />
+    <Content Include="images\tech-mahindra.svg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -308,13 +318,13 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Home\Movies.cshtml" />
+    <Content Include="Views\Rental\RentMovie.cshtml" />
+    <Content Include="Views\Rental\ReturnMovie.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="images\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Account\" />
-    <Folder Include="Views\Rental\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

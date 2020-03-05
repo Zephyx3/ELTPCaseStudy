@@ -30,7 +30,5 @@ namespace ELTPCaseStudy.Controllers
             Session.Abandon();
             return RedirectToAction("Index", "Home");
         }
-
-
     }
 }
