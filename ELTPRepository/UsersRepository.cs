@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using ELTPDomainModel;
+using System.Collections;
 
 namespace ELTPRepository
 {
@@ -12,22 +13,28 @@ namespace ELTPRepository
         void UpdateUser(Users u);
         void UpdateUserDetails(Users u);
         void UpdateUserPassword(Users u);
-        void DeleteUser(Users u);
+        void DeleteUser(int uid);
 
         List<Users> GetUsers();
 
-        List<Users> GetUsersByEmailAndPassowrd(string Email, string Password);
+        List<Users> GetUsersByEmailAndPassword(string Email, string Password);
 
         List<Users> GetUsersByEmail(string Email);
-        List<Users> GetUsersByID(int UserID);
+        List<Users> GetUsersByUserID(int UserID);
 
         int GetLatestUserID();
     }
     public class UsersRepository : IUsersRepository
     {
-        public void DeleteUser(Users u)
+        ELTPDbContext db;
+        public void DeleteUser(int uid)
         {
-            throw new NotImplementedException();
+            Users us = db.Users.Where(temp => temp.UserID == uid).FirstOrDefault();
+            if (us != null)
+            {
+                db.Users.Remove(us);
+                db.SaveChanges();
+            }
         }
 
         public int GetLatestUserID()
@@ -45,12 +52,12 @@ namespace ELTPRepository
             throw new NotImplementedException();
         }
 
-        public List<Users> GetUsersByEmailAndPassowrd(string Email, string Password)
+        public List<Users> GetUsersByEmailAndPassword(string Email, string Password)
         {
             throw new NotImplementedException();
         }
 
-        public List<Users> GetUsersByID(int UserID)
+        public List<Users> GetUsersByUserID(int UserID)
         {
             throw new NotImplementedException();
         }
