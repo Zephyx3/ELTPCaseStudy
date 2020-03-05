@@ -13,14 +13,16 @@ Movies
 - MovieReleaseDate [datetime]
 - MovieGenre [string]
 - MovieDescription [string]
+- ReviewsCount [int]
+
 
 Reviews
 - ReviewID [int] PK
-- ReviewName [string]
 - ReviewText [string]
 - ReviewDateAndTime [datetime]
 - UserID [int] FK
 - MovieID [int] FK
+- ReviewCount [int]
 
 Users
 - UserID [int] PK
@@ -33,5 +35,5 @@ Users
 Rentals
 - ReatalID [int] PK
 - RentalDateAndTime [datetime]
-- RentalDuration [int]
+- RentalDuration [datetime]
 - MovieID [int] FK
