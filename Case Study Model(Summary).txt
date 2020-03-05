@@ -1,0 +1,37 @@
+ELTPCaseStudy
+- Movies
+- Reviews
+- Users
+- Rentals
+
+PK - Primary Key
+FK - Foreign Key
+
+Movies
+- MovieID [int] PK
+- MovieName[string]
+- MovieReleaseDate [datetime]
+- MovieGenre [string]
+- MovieDescription [string]
+
+Reviews
+- ReviewID [int] PK
+- ReviewName [string]
+- ReviewText [string]
+- ReviewDateAndTime [datetime]
+- UserID [int] FK
+- MovieID [int] FK
+
+Users
+- UserID [int] PK
+- Email [string]
+- PasswordHash [string]
+- Name [string]
+- Mobile [int]
+- IsAdmin [Boolean]
+
+Rentals
+- ReatalID [int] PK
+- RentalDateAndTime [datetime]
+- RentalDuration [int]
+- MovieID [int] FK
