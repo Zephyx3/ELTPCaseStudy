@@ -10,44 +10,91 @@ namespace ELTPRepository
     {
         void InsertMovie(Movies m);
         void UpdateMovieDetails(Movies m);
-        void UpdateMovieReviewsCount(int rid, int value);
-        void DeleteMovie(int rid);
+        void UpdateMovieReviewsCount(int mid, int value);
+        void UpdateMoviesRatingsCount(int mid, int value);
+        void UpdateMoviesViewsCount(int mid, int value);
+        void DeleteMovie(int mid);
 
         List<Movies> GetMovies();
-        List<Movies> GetMoviesByMovieID(int rid);
+        List<Movies> GetMoviesByMovieID(int MovieID);
     }
     public class MoviesRepository : IMoviesRepository
     {
-        public void DeleteMovie(int rid)
+        ELTPDbContext db;
+        public MoviesRepository()
         {
-            throw new NotImplementedException();
+            db = new ELTPDbContext();
+        }
+
+        public void DeleteMovie(int mid)
+        {
+            Movies mo = db.Movies.Where(temp => temp.MovieID == mid).FirstOrDefault();
+            if (mo != null)
+            {
+                db.Movies.Remove(mo);
+                db.SaveChanges();
+            }
         }
 
         public List<Movies> GetMovies()
         {
-            throw new NotImplementedException();
+            List<Movies> mo = db.Movies.OrderByDescending(temp => temp.MovieReleaseDate).ToList();
+            //List<Movies> mo = db.Movies.OrderByDescending(temp => temp.MovieName).ToList();
+            return mo;
         }
 
-        public List<Movies> GetMoviesByMovieID(int rid)
+        public List<Movies> GetMoviesByMovieID(int MovieID)
         {
-            throw new NotImplementedException();
+            List<Movies> mo = db.Movies.OrderByDescending(temp => temp.MovieID == MovieID).ToList();
+            return mo;
         }
 
         public void InsertMovie(Movies m)
         {
-            throw new NotImplementedException();
+            db.Movies.Add(m);
+            db.SaveChanges();
         }
 
         public void UpdateMovieDetails(Movies m)
         {
-            throw new NotImplementedException();
+            Movies mo = db.Movies.Where(temp => temp.MovieID == m.MovieID).FirstOrDefault();
+            if (mo != null)
+            {
+                mo.MovieName = m.MovieName;
+                mo.MovieReleaseDate = m.MovieReleaseDate;
+                mo.MovieGenre = m.MovieGenre;
+                mo.MovieDescription = m.MovieDescription;
+            }
         }
 
         public void UpdateMovieReviewsCount(int rid, int value)
         {
-            throw new NotImplementedException();
+            Movies mo = db.Movies.Where(temp => temp.MovieID == rid).FirstOrDefault();
+            if (mo != null)
+            {
+                mo.ReviewsCount += value;
+                db.SaveChanges();
+            }
+        }
+
+        public void UpdateMoviesRatingsCount(int mid, int value)
+        {
+            Movies mo = db.Movies.Where(temp => temp.MovieID == mid).FirstOrDefault();
+            if (mo != null)
+            {
+                mo.RatingsCount += value;
+                db.SaveChanges();
+            }
+        }
+
+        public void UpdateMoviesViewsCount(int mid, int value)
+        {
+            Movies mo = db.Movies.Where(temp => temp.MovieID == mid).FirstOrDefault();
+            if(mo != null)
+            {
+                mo.ViewsCount += value;
+                db.SaveChanges();
+            }
         }
     }
-
-
 }
