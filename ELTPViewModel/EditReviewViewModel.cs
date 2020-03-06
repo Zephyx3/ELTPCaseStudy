@@ -2,31 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-
 
 namespace ELTPViewModel
 {
-    public class ReviewViewModel
+    public class EditReviewViewModel
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Required]
         public int ReviewID { get; set; }
-        public string ReviewName { get; set; }
+        [Required]
         public string ReviewText { get; set; }
+        [Required]
         public DateTime ReviewDateAndTime { get; set; }
+        [Required]
         public int UserID { get; set; }
+        [Required]
         public int MovieID { get; set; }
-
+        [Required]
         public int RatingsCount { get; set; }
-
-        [ForeignKey("UserID")]
-        public virtual UserViewModel User { get; set; }
-
-        public virtual List<RatingsViewModel> Ratings { get; set; }
-
-        public int CurrentUserRatingType { get; set; }
-
+        public virtual MovieViewModel Movie { get; set; }
     }
 }

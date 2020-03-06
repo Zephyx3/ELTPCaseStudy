@@ -11,7 +11,7 @@ namespace ELTPRepository
         void InsertReview(Reviews r);
         void UpdateReview(Reviews r);
         void UpdateReviewVotesCount(int rid, int uid, int value);
-
+        void DeleteReview(int rid);
         List<Reviews> GetReviewsByMovieID(int rid);
         List<Reviews> GetReviewsByReviewID(int rid);
 
@@ -26,7 +26,7 @@ namespace ELTPRepository
             mr = new MoviesRepository();
         }
 
-        public void DeleteAnswer(int rid)
+        public void DeleteReview(int rid)
         {
             Reviews rev = db.Reviews.Where(temp => temp.ReviewID == rid).FirstOrDefault();
             if (rev != null)
