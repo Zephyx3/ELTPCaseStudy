@@ -18,29 +18,63 @@ namespace ELTPRepository
     }
     public class ReviewsRepository : IReviewsRepository
     {
+        ELTPDbContext db;
+        IMoviesRepository mr;
+        public ReviewsRepository()
+        {
+            db = new ELTPDbContext();
+            mr = new MoviesRepository();
+        }
+
+        public void DeleteAnswer(int rid)
+        {
+            Reviews rev = db.Reviews.Where(temp => temp.ReviewID == rid).FirstOrDefault();
+            if (rev != null)
+            {
+                db.Reviews.Remove(rev);
+                db.SaveChanges();
+                mr.UpdateMovieReviewsCount(rev.ReviewID, -1);
+            }
+        }
+
         public List<Reviews> GetReviewsByMovieID(int rid)
         {
-            throw new NotImplementedException();
+            List<Reviews> rev = db.Reviews.Where(temp => temp.ReviewID == rid).OrderByDescending(temp => temp.ReviewDateAndTime).ToList();
+            return rev;
         }
 
         public List<Reviews> GetReviewsByReviewID(int rid)
         {
-            throw new NotImplementedException();
+            List<Reviews> rev = db.Reviews.Where(temp => temp.ReviewID == rid).ToList();
+            return rev;
         }
 
         public void InsertReview(Reviews r)
         {
-            throw new NotImplementedException();
+            db.Reviews.Add(r);
+            db.SaveChanges();
+            mr.UpdateMovieReviewsCount(r.MovieID, 1);
         }
 
         public void UpdateReview(Reviews r)
         {
-            throw new NotImplementedException();
+            Reviews rev = db.Reviews.Where(temp => temp.ReviewID == r.ReviewID).FirstOrDefault();
+            if (rev != null)
+            {
+                rev.ReviewText = r.ReviewText;
+                db.SaveChanges();
+            }
         }
 
         public void UpdateReviewVotesCount(int rid, int uid, int value)
         {
-            throw new NotImplementedException();
+            Reviews rev = db.Reviews.Where(temp => temp.ReviewID == rid).FirstOrDefault();
+            if (rev != null)
+            {
+                rev.RatingsCount += value;
+                db.SaveChanges();
+                mr.UpdateMoviesRatingsCount(rev.ReviewID, value);
+            }
         }
     }
 }
