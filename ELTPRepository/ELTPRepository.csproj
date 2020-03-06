@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="MoviesRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RentalRepository.cs" />
     <Compile Include="ReviewsRepository.cs" />
     <Compile Include="UsersRepository.cs" />
   </ItemGroup>

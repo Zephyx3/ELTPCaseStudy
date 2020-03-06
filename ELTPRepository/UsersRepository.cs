@@ -27,6 +27,11 @@ namespace ELTPRepository
     public class UsersRepository : IUsersRepository
     {
         ELTPDbContext db;
+
+        public UsersRepository()
+        {
+            db = new ELTPDbContext();
+        }
         public void DeleteUser(int uid)
         {
             Users us = db.Users.Where(temp => temp.UserID == uid).FirstOrDefault();

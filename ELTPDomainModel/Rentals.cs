@@ -13,14 +13,16 @@ namespace ELTPDomainModel
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int RentalID { get; set; }
         public DateTime RentalDateAndTime { get; set; }
-        public int RentalDuration { get; set; }
+        public DateTime RentalDuration { get; set; }
 
-        public int MovieID { get; set; }
+        //public int MovieID { get; set; }//to delete
+        public Users Users { get; set; }
+        public Movies Movies { get; set; }
 
-        [ForeignKey("UserID")]
-        public virtual Users User { get; set; }
+        //[ForeignKey("UserID")]
+        //public virtual Users User { get; set; }
 
-        [ForeignKey("MovieID")]
-        public virtual List<Movies> Movie { get; set; }
+        //[ForeignKey("MovieID")]
+        //public virtual List<Movies> Movie { get; set; }
     }
 }

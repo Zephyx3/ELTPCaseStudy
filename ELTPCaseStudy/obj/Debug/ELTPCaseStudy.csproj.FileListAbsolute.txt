@@ -106,3 +106,6 @@ C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\ELTPServiceLaye
 C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\ELTPServiceLayer.dll.config
 C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\ELTPViewModel.pdb
 C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\ELTPViewModel.dll.config
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\AutoMapper.dll
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\AutoMapper.pdb
+C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPCaseStudy\bin\AutoMapper.xml

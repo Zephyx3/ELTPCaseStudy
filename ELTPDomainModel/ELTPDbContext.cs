@@ -10,6 +10,8 @@ namespace ELTPDomainModel
     {
         public DbSet<Movies> Movies { get; set; }
         public DbSet<Reviews> Reviews { get; set; }
+        public DbSet<Rentals> Rentals { get; set; }
+
         public DbSet<Users> Users{ get; set; }
     }
 }

@@ -176,7 +176,6 @@
     <Content Include="Content\Styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="images\movies\birds-of-prey.jpg" />
     <Content Include="images\movies\dolittle.jpg" />
     <Content Include="images\movies\godzilla.jpg" />

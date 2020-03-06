@@ -16,6 +16,7 @@ namespace ELTPServiceLayer
         void UpdateReview(EditReviewViewModel rvm);
         void UpdateReviewVotesCount(int rid, int uid, int value);
         void DeleteReview(int rid);
+
         List<ReviewViewModel> GetReviewsByMovieID(int mid);
         ReviewViewModel GetReviewByReviewID(int ReviewID);
 
@@ -31,6 +32,7 @@ namespace ELTPServiceLayer
         {
             revr.DeleteReview(rid);
         }
+
 
         public ReviewViewModel GetReviewByReviewID(int ReviewID)
         {

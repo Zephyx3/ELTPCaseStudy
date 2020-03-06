@@ -64,7 +64,9 @@ namespace ELTPRepository
                 mo.MovieReleaseDate = m.MovieReleaseDate;
                 mo.MovieGenre = m.MovieGenre;
                 mo.MovieDescription = m.MovieDescription;
+                db.SaveChanges();
             }
+            
         }
 
         public void UpdateMovieReviewsCount(int rid, int value)

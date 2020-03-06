@@ -14,6 +14,8 @@ Movies
 - MovieGenre [string]
 - MovieDescription [string]
 - ReviewsCount [int]
+- RatingsCount [int]
+- ViewsCount [int]
 
 
 Reviews
@@ -22,7 +24,8 @@ Reviews
 - ReviewDateAndTime [datetime]
 - UserID [int] FK
 - MovieID [int] FK
-- ReviewCount [int]
+- RatingsCount [int]
+
 
 Users
 - UserID [int] PK
@@ -36,4 +39,3 @@ Rentals
 - ReatalID [int] PK
 - RentalDateAndTime [datetime]
 - RentalDuration [datetime]
-- MovieID [int] FK
