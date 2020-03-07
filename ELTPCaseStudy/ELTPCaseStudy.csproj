@@ -158,7 +158,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RentalController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -174,7 +176,16 @@
     <Content Include="Content\Styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="images\movies\birds-of-prey.jpg" />
+    <Content Include="images\movies\dolittle.jpg" />
+    <Content Include="images\movies\godzilla.jpg" />
+    <Content Include="images\movies\mulan.jpg" />
+    <Content Include="images\movies\onward.jpg" />
+    <Content Include="images\movies\quietplace.jpg" />
+    <Content Include="images\movies\sonic.jpg" />
+    <Content Include="images\movies\spongebob.jpg" />
+    <Content Include="images\movies\trolls.jpg" />
+    <Content Include="images\tech-mahindra.svg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -306,10 +317,12 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Home\Movies.cshtml" />
+    <Content Include="Views\Rental\RentMovie.cshtml" />
+    <Content Include="Views\Rental\ReturnMovie.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -322,6 +335,24 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ELTPDomainModel\ELTPDomainModel.csproj">
+      <Project>{152d59c3-65ac-4e99-a44a-fca3aa579649}</Project>
+      <Name>ELTPDomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ELTPRepository\ELTPRepository.csproj">
+      <Project>{e9eb5c82-4169-4bac-a5b8-f7713889c511}</Project>
+      <Name>ELTPRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ELTPServiceLayer\ELTPServiceLayer.csproj">
+      <Project>{6ff2a986-aa82-4a08-8705-bfe4930a31f0}</Project>
+      <Name>ELTPServiceLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ELTPViewModel\ELTPViewModel.csproj">
+      <Project>{52a6859e-e043-454e-8498-e0a7b69ef533}</Project>
+      <Name>ELTPViewModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

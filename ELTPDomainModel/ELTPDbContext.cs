@@ -9,7 +9,9 @@ namespace ELTPDomainModel
     public class ELTPDbContext:DbContext
     {
         public DbSet<Movies> Movies { get; set; }
-        public DbSet<Review> Reviews { get; set; }
-        public DbSet<User> Users{ get; set; }
+        public DbSet<Reviews> Reviews { get; set; }
+        public DbSet<Rentals> Rentals { get; set; }
+
+        public DbSet<Users> Users{ get; set; }
     }
 }
