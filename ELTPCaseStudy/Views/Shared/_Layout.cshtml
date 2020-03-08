@@ -12,25 +12,22 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("ELTP Case Study", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Movies", "Movies", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
+    <div class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+        <div class="navbar-header">
+            @Html.ActionLink("ELTP CaseStudy", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">@Html.ActionLink("Movies", "Movies", "Home")</li>
+                <li class="nav-item">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <li class="nav-item">@Html.ActionLink("About", "About", "Home")</li>
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+        
     </div>
     <div class="container body-content">
         @RenderBody()

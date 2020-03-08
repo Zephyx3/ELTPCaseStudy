@@ -1,18 +1,28 @@
 ﻿/*Nav Bar*/
-.navbar {
-    background-color: #161616;
-    margin: 0px;
+.navbar{
+    margin: 0rem;
+    padding-left: 5rem;
 }
-
-.navbar alink .navbar a:visited {
-    color: white ActiveBorder;
+/*Navbar main logo*/
+.navbar-brand{
+    font-size:1.5rem;
 }
-
-.navbar a:hover {
-    color: white;
-    text-decoration: underline;
+.navbar-header a {
+    text-decoration: none;
 }
-
+/*Sub navbar*/
+.nav-item {
+    padding-left: 2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.navbar-nav a:hover {
+    color: black;
+}
+.navbar-nav a {
+    text-decoration:solid;
+    color:#878787;
+}
 /*Body*/
 /* Set padding to keep content from hitting the edges */
 .body-content {
