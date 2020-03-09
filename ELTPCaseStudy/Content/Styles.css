@@ -58,3 +58,13 @@ textarea {
 .hidden {
     display: none;
 }
+
+.login_btn a{
+    float: right;
+    color: black;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
