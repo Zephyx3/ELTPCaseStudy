@@ -7,16 +7,16 @@ using ELTPDomainModel;
 
 namespace ELTPRepository
 {
-    public interface IRentalsRepository
+    public interface IRentalRepository
     {
         void StartMovieRental(Rentals r);
         void EditMovieRental(Rentals r);
         void EndMovieRental(int RenID);
     }
-    public class RentalsRepository : IRentalsRepository
+    public class RentalRepository : IRentalRepository
     {
         ELTPDbContext db;
-        public RentalsRepository() {
+        public RentalRepository() {
             db = new ELTPDbContext();
         }
         public void EditMovieRental(Rentals r)

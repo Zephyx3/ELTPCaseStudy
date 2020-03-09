@@ -10,17 +10,17 @@ using ELTPViewModel;
 
 namespace ELTPServiceLayer
 {
-    public interface IRentalService
+    public interface IRentalsService
     {
         void StartMovieRental(NewRentalViewModel rvm);
         void EditMovieRental(EditRentalViewModel rvm);
         void EndMovieRental(int RenID);
     }
-    public class RentalService : IRentalService
+    public class RentalsService : IRentalsService
     {
         IRentalRepository rr;
 
-        public RentalService()
+        public RentalsService()
         {
             rr = new RentalRepository();
         } 

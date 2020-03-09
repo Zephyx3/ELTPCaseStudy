@@ -1,4 +1,3 @@
-C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPDomainModel\obj\Debug\ELTPDomainModel.csprojAssemblyReference.cache
 C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPDomainModel\bin\ELTPDomainModel.dll.config
 C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPDomainModel\bin\ELTPDomainModel.dll
 C:\Users\Techm\Desktop\CaseStudy\ELTPCaseStudy\ELTPDomainModel\bin\ELTPDomainModel.pdb
