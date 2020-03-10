@@ -32,5 +32,9 @@ namespace ELTPCaseStudy.Controllers
 
             return View();
         }
+        public ActionResult Carousel()
+        {
+            return Carousel();
+        }
     }
 }
