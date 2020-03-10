@@ -15,7 +15,7 @@ namespace ELTPCaseStudy
             container.RegisterType<IUsersService, UserService>();
             container.RegisterType<IMoviesService, MoviesService>();
             container.RegisterType<IReviewsService, ReviewsService>();
-            container.RegisterType<IRentalsService, RentalsService>();
+            container.RegisterType<IRentalService, RentalService>();
 
             DependencyResolver.SetResolver(new Unity.Mvc5.UnityDependencyResolver(container));
            
