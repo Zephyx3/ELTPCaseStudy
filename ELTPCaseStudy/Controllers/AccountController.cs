@@ -25,11 +25,24 @@ namespace ELTPCaseStudy.Controllers
 
         public IUsersService Us => us;
 
-        // GET: Account
         public ActionResult Register()
         {
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Register(RegisterUserViewModel rvm)
+        {
+            int uid = this.us.InsertUser(rvm);
+            Session["CurrentUserID"] = uid;
+            Session["CurrentUserName"] = rvm.Name;
+            Session["CurrentUserEmail"] = rvm.Email;
+            Session["CurrentUserPassword"] = rvm.Password;
+            Session["CurrentUserIsAdmin"] = false;
+            return RedirectToAction("Index", "Home");
+        }
+
         public ActionResult Login()
         {
             LoginViewModel lvm = new LoginViewModel();

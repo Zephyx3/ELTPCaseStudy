@@ -73,7 +73,17 @@ textarea {
     color: black !important;
 }
 
+.register_btn a {
+    float: right;
+    color: grey;
+}
+
+.register_btn a:hover {
+    color: black !important;
+}
+
 .dropdown:hover > .dropdown-menu {
     display: block;
 }
+
 

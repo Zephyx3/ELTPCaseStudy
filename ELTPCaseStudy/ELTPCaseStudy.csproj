@@ -322,6 +322,9 @@
     <Content Include="Views\Rental\RentMovie.cshtml" />
     <Content Include="Views\Rental\ReturnMovie.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ChangeProfile.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
