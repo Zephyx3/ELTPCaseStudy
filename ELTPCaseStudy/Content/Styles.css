@@ -16,8 +16,13 @@
     font-weight: bold;
     font-size: 1.2rem;
 }
-.navbar-nav a:hover {
-    color: black;
+
+.navbar-nav .nav-link{
+    color: grey !important;
+}
+
+.navbar-nav .nav-link:hover{
+    color: black !important;
 }
 .navbar-nav a {
     text-decoration:solid;
@@ -58,3 +63,17 @@ textarea {
 .hidden {
     display: none;
 }
+
+.login_btn a{
+    float: right;
+    color: grey;
+}
+
+.login_btn a:hover {
+    color: black !important;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
