@@ -9,6 +9,7 @@ namespace ELTPDomainModel
 {
     public class Reviews
     {
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ReviewID { get; set; }
 
@@ -23,8 +24,8 @@ namespace ELTPDomainModel
         public int RatingsCount { get; set; }
 
 
-        [ForeignKey("UserID")]
-        public virtual Users User { get; set; }
+        //[ForeignKey("UserID")]
+        //public virtual Users User { get; set; }
 
     }
 }

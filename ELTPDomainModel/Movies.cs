@@ -10,7 +10,9 @@ namespace ELTPDomainModel
     public class Movies
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int MovieID { get; set; }
+        public int UserID { get; set; }
 
         public string MovieName { get; set; }
 
