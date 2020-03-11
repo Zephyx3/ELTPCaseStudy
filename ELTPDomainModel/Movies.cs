@@ -10,9 +10,7 @@ namespace ELTPDomainModel
     public class Movies
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int MovieID { get; set; }
-        public int UserID { get; set; }
 
         public string MovieName { get; set; }
 
@@ -30,10 +28,11 @@ namespace ELTPDomainModel
 
         public int ViewsCount { get; set; }
 
+        public int? UserID { get; set; }
 
         [ForeignKey("UserID")]
         public virtual Users Users { get; set; }
 
-        public virtual List<Reviews> Reviews { get; set; }
+        //public virtual List<Reviews> Reviews { get; set; }
     }
 }

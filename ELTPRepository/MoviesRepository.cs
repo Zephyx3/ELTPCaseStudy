@@ -38,8 +38,8 @@ namespace ELTPRepository
 
         public List<Movies> GetMovies()
         {
-            List<Movies> mo = db.Movies.OrderByDescending(temp => temp.MovieReleaseDate).ToList();
-            //List<Movies> mo = db.Movies.OrderByDescending(temp => temp.MovieName).ToList();
+            //List<Movies> mo = db.Movies.OrderByDescending(temp => temp.MovieReleaseDate).ToList();
+            List<Movies> mo = db.Movies.OrderByDescending(temp => temp.MovieName).ToList();
             return mo;
         }
 

@@ -1,0 +1,89 @@
+﻿@model List<ELTPViewModel.MovieViewModel>
+@{
+
+    ViewBag.Title = "Movies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movies List</h2>
+
+
+
+<table class="table table-bordered table-condensed table-hover">
+    <tr>
+        <th>
+            Movie
+        </th>
+        <th>
+            MovieReleased
+        </th>
+        <th>
+            MovieReleaseDate
+        </th>
+        <th>
+            MovieGenre
+        </th>
+        <th>
+            MovieDescription
+        </th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.MovieName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MovieReleased)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MovieReleaseDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MovieGenre)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MovieDescription)
+    </td>
+    <td>
+        <button class="btn btn-info editbutton" href="/Movies/EditMovies">Edit</button>
+        <button class="btn btn-info deletebutton">Delete</button>
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.MovieID}) 
+    </td>
+</tr>
+    }
+</table>
+
+
+@*<div class="row">
+        <div class="col-sm-12">
+            <table class="table">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MovieName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MovieReleased)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MovieReleaseDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MovieGenre)
+                        </td>
+                        <th>
+                            @Html.DisplayFor(modelItem => item.MovieDescription)
+                        </th>
+                        <td>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>*@

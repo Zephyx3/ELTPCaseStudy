@@ -17,15 +17,15 @@ namespace ELTPDomainModel
 
         public DateTime ReviewDateAndTime { get; set; }
 
-        public int UserID { get; set; }
+        public int? UserID { get; set; }
 
-        public int MovieID { get; set; }
+        public int? MovieID { get; set; }
 
         public int RatingsCount { get; set; }
 
 
-        //[ForeignKey("UserID")]
-        //public virtual Users User { get; set; }
+        [ForeignKey("UserID")]
+        public virtual Users User { get; set; }
 
     }
 }

@@ -53,7 +53,7 @@ namespace ELTPRepository
         {
             db.Reviews.Add(r);
             db.SaveChanges();
-            mr.UpdateMovieReviewsCount(r.MovieID, 1);
+            mr.UpdateMovieReviewsCount(r.MovieID.Value, 1);
         }
 
         public void UpdateReview(Reviews r)
