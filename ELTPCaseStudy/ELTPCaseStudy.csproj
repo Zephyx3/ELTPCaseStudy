@@ -178,6 +178,9 @@
     <Content Include="Content\Styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="images\carousel\birds of prey.jpg" />
+    <Content Include="images\carousel\dolittle.jpg" />
+    <Content Include="images\carousel\sonic.jpg" />
     <Content Include="images\movies\birds-of-prey.jpg" />
     <Content Include="images\movies\dolittle.jpg" />
     <Content Include="images\movies\godzilla.jpg" />
@@ -322,6 +325,7 @@
     <Content Include="Views\Rental\RentMovie.cshtml" />
     <Content Include="Views\Rental\ReturnMovie.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Home\Carousel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
