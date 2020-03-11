@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using ELTPDomainModel;
+using System.Text;
+using System.Threading.Tasks;
 using System.Collections;
+using ELTPDomainModel;
 
 namespace ELTPRepository
 {
@@ -81,7 +83,7 @@ namespace ELTPRepository
         public void UpdateUser(Users u)
         {
             Users us = db.Users.Where(temp => temp.UserID == u.UserID).FirstOrDefault();
-            if(us != null)
+            if (us != null)
             {
                 us.Email = u.Email;
                 us.PasswordHash = u.PasswordHash;

@@ -1,2 +1,98 @@
-﻿body {
+﻿/*Nav Bar*/
+.navbar {
+    margin: 0rem;
+    padding-left: 5rem;
+}
+/*Navbar main logo*/
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-header a {
+    text-decoration: none;
+}
+/*Sub navbar*/
+.nav-item {
+    padding-left: 2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.navbar-nav .nav-link {
+    color: grey !important;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: black !important;
+    }
+
+.navbar-nav a {
+    text-decoration: solid;
+    color: #878787;
+}
+/*Body*/
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/*Buttons*/
+.active {
+    color: yellow ActiveBorder;
+}
+
+
+.dropdown-menu a:hover {
+    color: black;
+}
+
+.hidden {
+    display: none;
+}
+
+.login_btn a {
+    float: right;
+    color: grey;
+}
+
+    .login_btn a:hover {
+        color: black !important;
+    }
+
+.register_btn a {
+    float: right;
+    color: grey;
+}
+
+    .register_btn a:hover {
+        color: black !important;
+    }
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.contactUs {
+    background-color: lightblue;
+}
+
+.Ctitle {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
 }
