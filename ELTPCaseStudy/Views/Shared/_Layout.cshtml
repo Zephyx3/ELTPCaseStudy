@@ -14,7 +14,7 @@
 
 </head>
 <body>
-@*test*@
+    @*test*@
     <script src="~/Scripts/jquery-3.4.1.js"></script>
     <script src="~/Scripts/umd/popper.js"></script>
     <script src="~/Scripts/bootstrap.js"></script>
@@ -63,7 +63,7 @@
         </div>
         @if (Session["CurrentUserName"] == null)
         {
-            <div class="nav-item login_btn" >
+            <div class="nav-item login_btn">
                 <a class="nav-link" href="/account/login">Login</a>
             </div>
         }
@@ -73,11 +73,13 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - ELTP Case Study</p>
-        </footer>
     </div>
-
+    <div id="BlankHeight"></div>
+    <footer class="footer">
+        <div class="container foo">
+            <p>&copy; @DateTime.Now.Year - ELTP Case Study</p>
+        </div>
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
