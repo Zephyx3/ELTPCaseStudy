@@ -36,42 +36,55 @@
         </tr>
         @foreach (var item in Model)
         {
-            <tr>
-                <td class="movieName">
-                    @Html.DisplayFor(modelItem => item.MovieName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MovieReleased)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MovieReleaseDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MovieGenre)
-                </td>
-                <td class="movieDesc">
+    <tr>
+        <td class="movieName">
+            @Html.DisplayFor(modelItem => item.MovieName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MovieReleased)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MovieReleaseDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MovieGenre)
+        </td>
+        <td class="movieDesc">
 
-                    @Html.DisplayFor(modelItem => item.MovieDescription)
-                    <button class="btnRead">Read More...</button>
-                </td>
-                <td>
-                    <button class="btn btn-info editbutton" href="/Movies/EditMovies">Edit</button>
-                    <button class="btn btn-info deletebutton">Delete</button>
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.MovieID })
-                    <button class="btn btn-info deletebutton">Delete</button>
-                </td>
-            </tr>
+            @Html.DisplayFor(modelItem => item.MovieDescription)
+            <button class="btnRead">Read More...</button>
+        </td>
+        @if (Session["CurrentUserName"] != null)
+        {
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MovieID })
+                @Html.HiddenFor(modelItem => item.MovieID)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.MovieID })
+                @Html.HiddenFor(modelItem => item.MovieID)
+            </td>
+            @*<td>
+                <button class="btn btn-info editbutton" href="/Movies/EditMovies">Edit</button>
+                <button class="btn btn-info deletebutton">Delete</button>
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MovieID })
+                <button class="btn btn-info deletebutton">Delete</button>
+            </td>*@
+        }
+    </tr>
         }
     </table>
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
 
     <script>
-        $(".btnRead").click(function () {
-            $('hr').removeClass("MovieDesc");
+
+        $(".btnRead").on('click', function() {
+            $('hr.btnRead').removeClass("MovieDesc");
             $(this).val("Read Less");
         });
 

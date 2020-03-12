@@ -4,57 +4,63 @@
     ViewBag.Title = "Home Page";
 }
 
+    <body>
+        <div class="container">
+            @Html.Partial("Carousel")
+        </div>
 
-<div class="container">
-    @Html.Partial("Carousel")
-</div>
-
-<div class="jumbotron">
-    <div>
-        <h1>Movie Mania</h1>
-        <p class="lead">Featuring the newest and upcoming movies of 2020, with highly reknowned critiques giving their reviews.</p>
-        <p><a href="../Movies" class="btn btn-primary btn-lg">See all movies &raquo;</a></p>
-    </div>
-</div>
-
-<div class="ContactContainer">
-    <p class="Ctitle is-4">CONTACT</p>
-    <div class="row">
-        <div class="col-md-7">
-            <div class="mapouter">
-                <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=honeywell%20building&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net"></a></div>
-                <style>
-                    .mapouter {
-                        position: relative;
-                        text-align: right;
-                        height: 500px;
-                        width: 600px;
-                    }
-
-                    .gmap_canvas {
-                        overflow: hidden;
-                        background: none !important;
-                        height: 500px;
-                        width: 600px;
-                    }
-                </style>
+        <div class="jumbotron">
+            <div>
+                <h1>Movie Mania</h1>
+                <p class="lead">Featuring the newest and upcoming movies of 2020, with highly reknowned critiques giving their reviews.</p>
+                <p><a href="../Movies" class="btn btn-primary btn-lg">See all movies &raquo;</a></p>
             </div>
         </div>
-        <div class="col-md-5">
-            <h4>WHERE TO FIND US: </h4>
-            <address>
-                Honeywell Building<br />
-                17 Changi Business Park Central 1,<br />
-                Singapore 486073<br />
-                <abbr title="Phone">P: 6417 7201</abbr>
-            </address>
-            <h4>NEAREST MRT:</h4>
-            <p>Expo MRT</p>
-            <h4>NEAREST BUSSTOP:</h4>
-            <p>Honeywell Bdlg Busstop</p>
-        </div>
-    </div>
-</div>
 
-<footer>
-</footer>
+        <div class="ContactContainer">
+            <p class="Ctitle is-4">CONTACT</p>
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="mapouter">
+                        <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=honeywell%20building&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net"></a></div>
+                        <style>
+                            .mapouter {
+                                position: relative;
+                                text-align: right;
+                                height: 500px;
+                                width: 600px;
+                            }
+
+                            .gmap_canvas {
+                                overflow: hidden;
+                                background: none !important;
+                                height: 500px;
+                                width: 600px;
+                            }
+                        </style>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <h4>WHERE TO FIND US: </h4>
+                    <address>
+                        Honeywell Building<br />
+                        17 Changi Business Park Central 1,<br />
+                        Singapore 486073<br />
+                        <abbr title="Phone">P: 6417 7201</abbr>
+                    </address>
+                    <h4>NEAREST MRT:</h4>
+                    <p>Expo MRT</p>
+                    <h4>NEAREST BUSSTOP:</h4>
+                    <p>Honeywell Bdlg Busstop</p>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="~/Scripts/jquery-3.4.1.js"></script>
+        <script src="~/Scripts/umd/popper.js"></script>
+        <script src="~/Scripts/bootstrap.js"></script>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+
+    </body>

@@ -22,11 +22,6 @@ namespace ELTPCaseStudy.Controllers
         // GET: Movies
         public ActionResult Movies()
         {
-            //this.ms.GetMoviesByMovieID(mid, 0);
-            //int uid = Convert.ToInt32(Session["CurrentUserID"]);
-            //MovieViewModel mvm = this.ms.GetMoviesByMovieID(mid, uid);
-            //return View(mvm);
-
             List<MovieViewModel> movies = this.ms.GetMovies().Take(10).ToList();
             return View("Movies", movies);
         }
@@ -41,21 +36,8 @@ namespace ELTPCaseStudy.Controllers
         [UserAuthorizationFilterAttr]
         public ActionResult AddMovie(NewMovieViewModel nmvm)
         {
-            nmvm.MovieID = Convert.ToInt32(Session["CurrentUserID"]);
-            nmvm.MovieReleaseDate = DateTime.Now;
-            if (ModelState.IsValid)
-            {
                 this.ms.InsertMovie(nmvm);
-                return RedirectToAction("Movies", "AddMovie", new { id = nmvm.MovieID });
-            }
-            else
-            {
-                ModelState.AddModelError("x", "Invalid Data");
-                //MovieViewModel mvm = this.ms.GetMoviesByMovieID(nmvm.MovieID, nmvm.UserID);
-                List<MovieViewModel> movies = this.ms.GetMovies().Take(10).ToList();
-                return View("AddMovie", movies);
-            }
-
+                return RedirectToAction("Index"); //returns to Movie list Page
         }
 
         public ActionResult EditMovies(EditMovieViewModel emvm)
@@ -73,15 +55,10 @@ namespace ELTPCaseStudy.Controllers
             }
         }
 
-        public ActionResult DeleteMovie(int mid)
+        public ActionResult DeleteMovie(int id)
         {
-            Movies movies = db.Movies.Find(mid);
-            if(movies == null){
-                return View("NotFound");
-            }
-            db.Movies.Remove(movies);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            ms.DeleteMovie(id);
+            return RedirectToAction("MoviesList");
         }
     }
 }

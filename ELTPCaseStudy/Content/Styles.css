@@ -54,7 +54,8 @@ textarea {
 
 /*Buttons*/
 .active {
-    color: yellow ActiveBorder;
+    color: yellow;
+    
 }
 
 
@@ -120,7 +121,7 @@ img.AdminMovies {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 30px;
     background-color: white;
 }
 

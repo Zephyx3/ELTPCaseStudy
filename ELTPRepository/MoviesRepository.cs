@@ -28,7 +28,7 @@ namespace ELTPRepository
 
         public void DeleteMovie(int mid)
         {
-            Movies mo = db.Movies.Where(temp => temp.MovieID == mid).FirstOrDefault();
+            Movies mo = db.Movies.Where(temp => temp.MovieID == mid).First();
             if (mo != null)
             {
                 db.Movies.Remove(mo);
