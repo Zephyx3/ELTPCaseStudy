@@ -8,9 +8,9 @@ namespace ELTPDomainModel
 {
     public class ELTPDbContext:DbContext
     {
-        public ELTPDbContext() : base("ELTPCaseStudy")
-        {
-        }
+        //public ELTPDbContext() : base("ELTPCaseStudy")
+        //{
+        //}
         public DbSet<Movies> Movies { get; set; }
         public DbSet<Reviews> Reviews { get; set; }
         public DbSet<Rentals> Rentals { get; set; }

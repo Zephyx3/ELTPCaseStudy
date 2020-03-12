@@ -15,9 +15,7 @@
 </head>
 <body>
     @*test*@
-    <script src="~/Scripts/jquery-3.4.1.js"></script>
-    <script src="~/Scripts/umd/popper.js"></script>
-    <script src="~/Scripts/bootstrap.js"></script>
+
     <div class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
         <div class="navbar-header">
             @Html.ActionLink("ELTP CaseStudy", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
@@ -25,14 +23,14 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
-        <div class="collapse navbar-collapse" id="collapsibleNavBar">
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies</a>
+                    <a class="nav-link dropdown-toggle" href="/Movies" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies</a>
                     @if (Session["CurrentUserName"] != null)
                     {
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="nav-item dropdown-item" href="/Movies">View Movies</a>
+                            <a class="nav-item dropdown-item" href="Movies/Movies">View Movies</a>
                             <a class="nav-item dropdown-item" href="#">Add Movie</a>
                             <a class="nav-item dropdown-item" href="#">Edit Movie</a>
                             <a class="nav-item dropdown-item" href="#">Delete Movie</a>
@@ -86,6 +84,10 @@
             <p>&copy; @DateTime.Now.Year - ELTP Case Study</p>
         </div>
     </footer>
+
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/umd/popper.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

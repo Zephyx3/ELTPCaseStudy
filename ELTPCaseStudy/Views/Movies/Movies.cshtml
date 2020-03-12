@@ -4,59 +4,83 @@
     ViewBag.Title = "Movies";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<head>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Styles/bootstrap")
+    @Styles.Render("~/Styles/site")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/bundles/jquery")
+</head>
+<body>
+    <h2>Movies List</h2>
 
-<h2>Movies List</h2>
+    <table class="table table-bordered table-condensed table-hover">
+        <tr>
+            <th>
+                Movie
+            </th>
+            <th>
+                Movie Released
+            </th>
+            <th>
+                Movie Release Date
+            </th>
+            <th>
+                Movie Genre
+            </th>
+            <th>
+                Movie Description
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="movieName">
+                    @Html.DisplayFor(modelItem => item.MovieName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MovieReleased)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MovieReleaseDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MovieGenre)
+                </td>
+                <td class="movieDesc">
 
+                    @Html.DisplayFor(modelItem => item.MovieDescription)
+                    <button class="btnRead">Read More...</button>
+                </td>
+                <td>
+                    <button class="btn btn-info editbutton" href="/Movies/EditMovies">Edit</button>
+                    <button class="btn btn-info deletebutton">Delete</button>
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MovieID })
+                    <button class="btn btn-info deletebutton">Delete</button>
+                </td>
+            </tr>
+        }
+    </table>
 
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
 
-<table class="table table-bordered table-condensed table-hover">
-    <tr>
-        <th>
-            Movie
-        </th>
-        <th>
-            MovieReleased
-        </th>
-        <th>
-            MovieReleaseDate
-        </th>
-        <th>
-            MovieGenre
-        </th>
-        <th>
-            MovieDescription
-        </th>
-        <th></th>
-        <th></th>
-    </tr>
-    @foreach (var item in Model)
-    {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.MovieName)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.MovieReleased)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.MovieReleaseDate)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.MovieGenre)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.MovieDescription)
-    </td>
-    <td>
-        <button class="btn btn-info editbutton" href="/Movies/EditMovies">Edit</button>
-        <button class="btn btn-info deletebutton">Delete</button>
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.MovieID}) 
-    </td>
-</tr>
-    }
-</table>
+    <script>
+        $(".btnRead").click(function () {
+            $('hr').removeClass("MovieDesc");
+            $(this).val("Read Less");
+        });
+
+        //$(".btnRead").on('click', function () {
+
+        //});
+
+    </script>
+</body>
 
 
 @*<div class="row">

@@ -20,7 +20,7 @@ namespace ELTPCaseStudy.Controllers
         }
 
         // GET: Movies
-        public ActionResult Index()
+        public ActionResult Movies()
         {
             //this.ms.GetMoviesByMovieID(mid, 0);
             //int uid = Convert.ToInt32(Session["CurrentUserID"]);
